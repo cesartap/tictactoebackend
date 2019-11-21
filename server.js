@@ -20,9 +20,10 @@ connection.once('open', () => {
 })
 
 const gamesRouter = require('./routes/game');
-
+const conditionsRouter = require('./routes/conditions');
 // contexto de los servicios
 app.use('/games', gamesRouter);
+app.use('/conditions', conditionsRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

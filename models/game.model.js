@@ -2,21 +2,15 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const gameSchema = new Schema({
+const gameSchema = new Schema({_id:{type: String},
   nameP1: {
     type: String,
     required: true,
     unique: false,
     trim: true,
-    minlength: 3
+    minlength: 1
   },
-  nameP2: {
-    type: String,
-    required: true,
-    unique: false,
-    trim: true,
-    minlength: 3
-  }, winner: {
+  gamesWon: {
     type: Number,
     required: true
   }
